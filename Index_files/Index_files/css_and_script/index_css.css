@@ -1,0 +1,1216 @@
+
+#loading
+{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background:#fff url('../Image/preloader.gif') no-repeat center ;
+  z-index: 100;
+}
+.disclaimer
+{
+ display:none;   
+}
+* {
+    cursor: url(../Image/cursor.png),auto;
+  }
+
+body
+{
+margin:0px;
+padding:0px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+background-color: #fff;
+}
+h1,h2
+{
+  color: #00c900;
+  font-weight: 100;
+}
+/* ......... --- ScrollBar Start --- ......... */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f5f5f5; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(192, 192, 192); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(145, 145, 145); 
+  }
+
+
+  /* ......... --- Header Section --- ......... */
+
+
+
+  @keyframes fadein
+  {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;}
+  }
+  @keyframes fadein
+  {
+      100% {
+          opacity: 1;
+      }
+      0% {
+          opacity: 0;}
+  }
+  header #logo {
+    float: left;
+    margin: 20px 0px 0px 30px;
+    font-weight: 600;
+  }
+header #logo-img
+{
+    width:.9rem;
+    height:auto;
+}
+header .logo-text
+{
+  font-size: 1.6rem;
+  color: #00c900;
+  position: absolute;
+  top: 35px;
+  line-height: 1.10;
+}
+header #fheader /*To put navigation on top*/
+{
+    position: absolute;
+    top: 0px;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    height: 70px;
+}
+#signUpFormHolder
+{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+}
+#signUpForm
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+#signUpForm iframe
+{
+  width: 28.3rem;
+  height: 36rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+#account
+{
+  width: 15rem;
+  height: 20rem;
+  position: absolute;
+  top: 5.7rem;
+  right: 2.2rem;
+  border-radius: 15px;
+  border: 1px #c9c9c9 solid;
+  z-index:1000;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: none;
+}
+#account_img_holder
+{
+  width: 100%;
+  height: 40%;
+  background-color: #00c900;
+  border-radius: 40%;
+  border-top-left-radius:0 ;
+  border-top-right-radius:0 ;
+  position: relative;
+}
+.account_img
+{
+position:absolute;
+bottom: -25px;
+width: 60px;
+height: auto;
+left: 5.6rem;
+}
+#account_details_holder
+{
+  text-align: center;
+  padding-top: 25px;
+}
+.account_button_signin
+{
+  margin-top: 20px;
+  width: 10rem;
+  height: 2rem;
+  border: 2px #00c900 solid;
+  background-color: transparent;
+  color: #00c900;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.account_button_signin:hover
+{
+  background-color: #00c900;
+  color: #fff;
+  animation-name:fadein;
+  animation-duration:.4s;  
+}
+header #account_button
+{
+  margin: 47px 41px 0px 0px;
+  float: right;
+  background-color: transparent;
+  border:3px solid #00c900;
+  display: block;
+  font-weight: 400;
+  color: #00c900;
+  text-align: center;
+  border-radius: 30px;
+  width: 130px;
+  height: 37px;
+  outline: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+header #account_button:hover /*Hover effect of buy button*/
+{
+  background-color: #00c900;
+  color: white;
+  animation-name:fadein;
+  animation-duration:.4s;  
+
+}
+#fheader
+{
+  background-color: #fff;
+}
+/*Header navigation section*/
+header #nav-button
+{
+  color: black;
+  position: fixed;
+  right:2.5vw;
+  top:47%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	padding:13px;
+	cursor: pointer;
+  width: 25px;
+  height: 25px;
+  animation-name:fadein;
+  animation-duration:.4s;
+}
+header #nav-button svg
+{
+  position: relative;
+  width:25px;
+  height: auto;
+}
+header #navholder
+{
+  width:100%;
+  height: 100vh;
+  position: fixed;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.7s;
+}
+.show {
+	opacity: 1 !important;
+}
+#search_result
+{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  position: absolute;
+  width: 33rem;
+  margin-top: 1rem;
+  min-height: 3rem;
+  display:none;
+}
+#search_result ul
+{
+  margin: 0px;
+  padding: 0px;
+}
+#search_result a
+{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  padding:10px 2rem;
+  cursor: pointer;
+
+}
+#search_result li:hover
+{
+  background-color: #dcdcdc;
+}
+#search_result li{
+  list-style:none;
+  text-align: left;
+  display: flex;
+}
+
+.text-box
+{
+    text-align: center;
+    background-color: #d9eee1;
+    margin: 0px;
+    padding: 3.5rem 0 0 0;
+    height: 5rem;
+    font-weight: 500;
+}
+.text-box h1
+{
+    margin:0px;
+}
+.bgsvg
+{
+    background-color:#D9EEE1;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 20rem;
+    z-index: -1;
+}
+.bgsvg1
+{
+  height: 17rem;
+  z-index: -1;
+}
+#thought_svg
+{
+  background-color: #D9EEE1;
+  height: 5rem;
+    margin-bottom: -10px;
+
+}
+#thought_svg_bottom
+{
+  margin-bottom: 20em;
+}
+header nav
+{
+  width:100%;
+  height: 100vh;
+  color: #fff;
+  z-index: 10;
+  position: relative;
+  background: rgba(0,201,0,.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul
+{
+
+text-align: center;
+  padding: 0%;
+  margin: 0%;
+}
+header nav ul li
+{
+  list-style-type: none;
+  text-transform: uppercase;
+}
+header nav ul a
+{  
+text-decoration: none;
+line-height: 2.1;
+color: #fff;
+font-size: 1.1rem;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+header nav ul a:hover /*Hover effect navigation text*/
+{
+  text-decoration: underline;
+  animation-name:fadein;
+  animation-duration:.5s;
+}
+header nav #table2 td 
+{
+  width: 10.5%;
+}
+header nav #table1, #table2
+{
+  margin: auto;
+  margin-top: 10%;
+}
+header nav #table1 input {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #00c900;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #00c900;
+  text-align: center;
+  border-radius: 30px;
+  width: 130px;
+  height: 35px;
+  outline: none;
+  margin: 0 10px;
+  cursor: pointer;
+}
+header nav #table1 input:hover/*hover effect of input*/
+{
+  color: #fff;
+  background-color: #00c900;
+  border:1px solid #fff;
+
+}
+nav ul table .social-media-page
+{
+  width: 45px;
+  height: 45px;
+}
+nav ul table #facebook:hover
+{
+  fill: blue;
+
+}
+nav ul table #instagram:hover
+{
+  fill:rgb(202, 0, 17);
+
+}
+nav ul table #twitter:hover
+{
+  fill: dodgerblue;
+}
+
+  /* ......... --- main Section --- ......... */
+
+main #bgimg /*For background image*/
+{
+    
+    height: 100vh;
+    text-align: center;
+    font-size: calc(0.75em + 8vmin);
+    color: #00c900;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
+@media screen and (max-width:630px) {
+  main #bgimg
+  {
+    font-size: 6vw;
+    font-size: calc(0.75em + 6.3vmin);
+    height:calc(100vh - 100px);
+  }  
+}
+/* ......... ---  Thought  --- ......... */
+main #thought
+{
+  padding: 7% 0 0 0;
+  background-color:#d9eee1;
+  text-align: center;
+  font-size: calc(0.75em + 1.4vmin);
+}
+main #thought p
+{
+  font-weight: 300;
+  line-height: 1.5;
+}
+main #thought img
+{
+  max-width: 50rem;
+  width: 100%;
+}
+
+/* ......... ---  Posts --- ......... */
+main .posts
+{
+  width: 100%;  
+  box-sizing: border-box;
+
+}
+main .posts #post
+{  
+  text-align: center;
+  margin: 0;
+} 
+main #flex-container
+{
+  margin: 4% 9.5% 2% 9.5%;
+
+}
+main #flex
+{
+  display: flex;
+  justify-content:space-around ;
+  flex-wrap: wrap;
+}
+main .posts .CommanCss
+{
+  position: relative;
+  max-width: 310px;
+  box-sizing: border-box;
+  height: 530px;
+  box-shadow:  2px 2px 27px #e1e1e3, -15px -15px 27px #ffffff; 
+  background-color: #fff;
+  z-index: -20;
+  margin-bottom: 55px;
+  border-radius: 5px;
+  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+  line-height: 1.38;
+}
+
+
+main .posts img
+{
+  max-width:200px;
+	max-height:200px;
+  margin: auto;
+  display: block;
+  text-align: center;
+	background-position:center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  
+}
+
+main .posts h2
+{
+  padding: 10px 10px 5px 20px;
+  margin: 0;
+  font-weight:700;
+  color: #000;
+}
+main .posts p
+{
+  padding: 0px 20px 25px 20px;
+  font-size: 1.06em;
+}
+main .posts #price
+{
+  text-align: center;
+  background-color: #00C900;
+  font-weight: normal;
+  font-size: 1.25em;
+  margin-top: 10px;
+  box-shadow: inset 0px 8px 8px -11px #000, inset 0px -7px 8px -11px #000;
+}
+#search_bar
+{
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #282A35;
+  border-radius: 25px;
+  width: 30.8rem;
+  padding-left: 25px;
+  background: white;
+  outline: 0;
+}
+
+main .posts a {
+  color: rgb(20, 20, 20);
+  text-decoration: none;
+  margin: 0px;
+  cursor: pointer;
+}
+
+/* ......... ---  About Us --- ......... */
+/* .... ---  swiper code --- .... */
+
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+/* .... ---  swiper code ended --- .... */
+main #aboutus-holder
+{
+  position: relative;
+  z-index: -30;
+  width: 74vw;
+  height: 620px;
+  left: 50%;
+  transform:translate(-50%,0%);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+main #about-image
+{
+   position: absolute;
+   right: 0px;
+   bottom: 0px;
+   z-index: -20;
+   width: 70%;
+   height: 80%;
+}
+main #about-image2
+{
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: -20;
+   width: 70%;
+   height: 80%;
+}
+main #photo-background
+{
+  width: 400px;
+  height: auto;
+  position: absolute;
+  top: 0%;
+  left:50%;
+  transform:translate(-50%,0%);
+
+}
+main #aboutus #profile-image
+{
+  border-radius: 50%;
+  width: 180px;
+  position: absolute;
+  top: 94px;
+  left:50%;
+  transform:translate(-50%,0%);
+  height: auto;
+}
+main #aboutus .about-text
+{
+  text-align: center;
+  position: relative;
+  top: 352PX;
+  color: #000;
+  font-weight: 700;
+}
+#footer1
+{
+  margin-top: 10%;
+  width: 100%;
+  min-height: 28rem;
+  z-index: -30;
+}
+#footer_holder
+{
+  z-index: -20;
+  max-width: 361px;
+  border-radius: 13px;
+  box-shadow: rgb(136 165 191 / 48%) 6px 2px 16px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
+  box-sizing: border-box;
+  margin: 0 13%;
+  float: right;
+}
+
+ #contact_form
+{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 8px 5px 10px 5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+ #contact_form input
+{
+  border: none;
+  border: 2px solid #00c900;
+  height: 6.6vh;
+  outline: none;
+  font-size: 2.5vh;
+  margin-bottom: 8%;
+  box-sizing: border-box;
+  width: 80%;
+  z-index: -230;
+  background-color: rgb(245, 255, 244);
+  padding-left: 10px;
+  border-radius: 5px;
+}
+#message
+{
+  border: none;
+  border: 2px solid #00c900;
+  padding: 10px;
+  width: 75%;
+  margin-bottom: 8%;
+  background-color: rgb(245, 255, 244);
+  outline: none;
+  border-radius: 5px;
+
+}
+.alert
+{
+  width: 100%; height: 3rem; background-color: #04aa49;
+}
+#footer_wave_holder
+{
+  position: relative;
+  bottom: 0%;
+   z-index: -10;
+  left: 0px;
+    width: 100%;
+
+}
+ #footer2
+{
+  z-index: -10;
+  width: 100%;
+  background-color: #00C900;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+#footer_section
+{
+  padding: 0px 20px;
+}
+.wave
+{
+  position: absolute;
+  top: -100px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  background: url('../Image/footer_wave.png');
+  background-size: 1000px 100px;
+}
+#wave1
+{
+  opacity: 1;
+  bottom: 0px;
+  animation: animationWave2 6s linear infinite;
+}
+#wave2
+{
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animationWave 5s linear infinite;
+}
+#wave3
+{
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animationWave 3s linear infinite;
+}
+#wave4
+{
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animationWave 4s linear infinite;
+}
+#footer_section p
+{
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.35em;
+  margin: 10px 0px 5px 2px;
+}
+#share #share-text
+{
+  font-size: 1.4rem;
+
+}
+#share #declaimer
+{
+  font-size: 1.2rem;
+}
+#share svg
+{
+  width: 30px;
+  height: 45px;
+  padding: 0px 7.5px;
+}
+#share_icon .share_style
+{
+  border-radius: 50%;
+  padding: 0px 7.5px;
+  background-color: #fff;
+}
+footer #facebook_share:hover, #instagram_share:hover, #twitter_share:hover
+{
+  fill: #fff;
+  background-color: #00d800;
+}
+#share
+{
+  margin: 50px 0px 0px 40px;
+}
+@keyframes animationWave {
+  0%
+  {
+    background-position-x: 1000px;
+  }
+ 100%
+  {
+    background-position-x: 0px;
+  }
+}
+@keyframes animationWave2 {
+  0%
+  {
+    background-position-x: 0px;
+  }
+ 100%
+  {
+    background-position-x: 1000px;
+  }
+}
+#contact_form input:hover, #message:hover
+{
+  background-color: #ccffcc;
+}
+/* -----------RESPONSIVE CODE------------- */
+@media screen and (max-width: 1200px)
+{
+
+  /*header*/
+  header #logo
+{
+  margin: 14px 0px 0px 30px;
+  font-weight: 600;
+}
+header #logo-last-text {
+  line-height: 0.15;
+}
+
+/* header end */
+  main #about-image
+  {
+    right: -5vh;  
+    height: auto;
+
+  }
+  main #about-image2
+  {
+    left: -5vw;
+    height: auto;
+
+  }
+  main #aboutus .about-text
+  {
+    top: 310PX;
+
+  }
+  main #photo-background
+  {
+    width: 300px;
+  }
+  main #aboutus #profile-image
+  {
+    width: 140px;
+    top: 73px;
+  }
+  nav ul table .social-media-page
+{
+  width: 43px;
+  height: 43px;
+}
+} 
+@media screen and (max-width:1140px)
+
+{
+  .bgsvg, .bgsvg1
+  {
+    height: 17rem;
+  }
+  #share
+  {
+    margin: 50px 0px 0px 10px;
+  }
+  nav ul table .social-media-page
+{
+  width: 41px;
+  height: 41px;
+}
+}
+
+
+
+@media screen and (max-width:1132px)
+{
+  .bgsvg, .bgsvg1
+  {
+    height: 13rem;
+  }
+  main #aboutus-holder
+  {
+    height: 485px;
+  }
+  main #aboutus .about-text
+  {
+    top: 260PX;
+  }
+  nav ul table .social-media-page
+  {
+    width: 38px;
+    height: 38px;
+  }
+}
+@media screen and (max-width:990px)
+{
+  nav ul table .social-media-page
+{
+  width: 36px;
+  height: 36px;
+}
+}
+@media screen and (max-width:900px)
+{
+  .bgsvg, .bgsvg1
+  {
+    height: 10rem;
+  }
+  main #about-image
+  {
+    right: -8vh;
+    height: auto;
+  }
+  main #about-image2
+  {
+    left: -8vw;
+    height: auto;
+  }
+  main #photo-background {
+    width: 253px;
+}
+main #aboutus #profile-image {
+  width: 123px;
+  top: 52px;
+}
+  main #aboutus-holder
+{
+  width: 80vw;
+  height: 420px;
+}
+main #aboutus .about-text
+{
+  top: 260px;
+}
+#share
+{
+  margin: 163px 0px 0px 5px;}
+
+#share svg
+{
+  width: 30px;
+  height: 45px;
+  padding: 0px 7.5px;
+}
+nav ul table .social-media-page
+{
+  width: 34px;
+  height: 34px;
+}
+} 
+
+@media screen and (max-width:800px)
+{
+#search_result
+{
+  width: 22rem;
+}
+
+#search_bar
+{
+  width: 20rem;
+}
+}
+@media screen and (max-width:760px)
+{
+  main #aboutus-holder
+  {
+    width: 90vw;
+  }
+  .swiper {
+
+    height: 460px;
+    }
+  header #account_button
+  {
+    font-size: 1.2rem;
+  }
+  main #flex-container 
+  {
+    margin: 60px 17px 0px 17px;
+  }
+  main #flex
+  {
+    justify-content: space-evenly;
+  }
+  header #nav-button
+  {
+    width: 20px;
+    height: 20px;
+  }
+  header #nav-button svg
+  {
+    width: 20px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width:675px)
+{
+  .bgsvg, .bgsvg1
+  {
+    height: 7rem;
+  }
+  main #flex
+  {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width:630px)
+{  
+  main #aboutus-holder
+  {
+    width: 94vw;
+  }
+}
+@media screen and (max-width:500px)
+{
+    .text-box h1
+    {
+         font-size: 5vw;
+    }
+ .text-box
+ {
+ font-size: 5vw;
+ padding: 5rem 0 0 0;
+ }
+  header #logo
+  {
+    margin: 13px 0px 0px 9px;
+  }
+  
+  header #logo img
+{
+  width: 4rem;
+}
+  header 
+  #nav-button
+  {
+    width: 18px;
+    height: 18px;
+  }
+  header #nav-button svg
+  {
+    width: 18px;
+    height: auto;
+  }
+  .swiper {
+    height: 670px;
+}
+  main #about-image
+  {
+    right: -4vh;
+    height: auto;
+  }
+  main #about-image2
+  {
+    left: -4vw;
+    height: auto;
+  }
+
+  main #aboutus-holder {
+    width: 92vw;
+    height: 630px;
+    border-radius: 5px;
+}
+main #photo-background {
+  width: 255px;
+}
+main #aboutus .about-text {
+  top: 350PX;
+  margin: 19px 0px;
+}
+header #account_button
+{
+  width: 124px;
+  margin:31px 10px 0px 0px;
+  font-size: 1rem;
+}
+header .logo-text
+{
+  font-size: 1.35em;
+  color: #00c900;
+  top: 27px;
+  line-height: 1.10;
+}
+#footer_holder
+{
+  margin: 0 4%;
+  max-width: 100%;
+}
+main #thought p
+{
+  font-weight: 100;
+  line-height: 1.2;
+
+}
+main #thought h1, h2
+{
+  margin-bottom: 35px;
+}
+main #aboutus #profile-image {
+  width: 117px;
+  top: 59px;
+}
+#footer_section
+{
+  padding: 20px 4px 20px 17px;
+}
+#share {
+  margin: 165px 0px 0px 0px;
+}
+#share #declaimer
+{
+  font-size: 4.2VW;
+}
+#share svg {
+  width: 23px;
+  height: 37px;
+}
+}
+@media screen and (max-width:400px){
+header #nav-button
+{
+   top: unset;
+    bottom: 40px;
+    right: 1rem;
+}
+.bgsvg, .bgsvg1 {
+    height: 3rem;
+}
+}
+@media screen and (max-width:360px){
+ #search_bar
+ {
+     width: 15rem;
+     margin-top: 1rem;
+ }
+ #search_result
+{
+        width: 17rem;
+}
+}
+@media screen and (max-width:311px)
+{
+  .bgsvg, .bgsvg1
+  {
+    height: 4rem;
+  }
+  header #logo img {
+    width: 3.5rem;
+}
+header .logo-text {
+  font-size: 1em;
+}
+
+#search_result
+{
+  width: 17.3rem;
+}
+#account
+{
+  width: calc(100%-40px);
+  right: 20px;
+  left: 20px;
+}
+
+header #account_button {
+  width: 97px;
+  margin: 26px 11px 0px 0px;
+  font-size: 0.8rem;
+  height: 34px;
+}
+  main #flex-container {
+    margin: 20px 0px 0px 0px;
+}
+main .posts img
+{
+  padding: 0px;
+}
+main .posts h2 
+{
+  padding: 5px 3px 4px 3px;
+}
+main .posts p {
+  padding: 0px 3px 25px 3px;
+  margin: 0%;
+}
+  main .posts .CommanCss 
+  {
+font-size: 5.2vw;
+height: auto;  
+}
+main #thought h1, h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+main .posts #post {
+  font-size: 1.2rem;
+}
+#share svg {
+  width: 7vw;
+  height: 5.5vh;
+}
+
+}
+@media screen and (max-width:280px) 
+{
+  header nav ul  {
+    font-size: 4vw;
+  }
+  header #logo {
+    margin: 15px 0px 0px 7px;
+}
+#search_bar {
+    width: 80vw;
+}
+#search_result
+{
+ width:95vw;   
+}
+header #logo img
+{
+  width: 50px;
+}
+header .logo-text {
+  font-size: 1.2rem;
+  top: 23px;
+}
+
+
+  header nav #table1 input
+{
+  width: 44vw;
+  height: 5.4vh;
+  font-size: 7.3vw;
+}
+}

@@ -181,7 +181,7 @@ body{margin:0; padding:0;}
     data-buttontext="Pay with Razorpay"    
     data-name="Pure Health Natural Products"    
     data-description="Thank You for using Pure health"    
-    data-image="https://pure-health-natural-products.000webhostapp.com/Index_files/Image/logo_header.png"    
+    data-image="../../Image/logo_header.png"    
     data-prefill.name="<?php echo $user_id;?>"  
     data-prefill.contact="<?php echo $number;?>"
     data-prefill.email="<?php echo $email;?>"    
@@ -219,7 +219,7 @@ body{margin:0; padding:0;}
      }
      </script>
 <div id="button_holder">
-    <img src="https://pure-health-natural-products.000webhostapp.com/Index_files/Image/Transaction_Cancelled_image.webp" alt="Transaction_Cancelled_image"/>
+    <img src="../../Image/Transaction_Cancelled_image.webp" alt="Transaction_Cancelled_image"/>
      <h2 style="font-family: sans-serif;">Transaction Cancelled</h2>
     <input type='submit' id="go_back" name="ordercancelled" value="GO BACK">
 </div>

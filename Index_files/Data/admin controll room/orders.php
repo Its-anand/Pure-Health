@@ -260,7 +260,7 @@ main #flex-container
         <div id="right_div">
      <form style="cursor: pointer;" method="post" action="../../Data/account and card/logout.php">
         <div id="right_div" style="cursor: pointer;" >
-            <a href="https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/logout.php">
+            <a href="./logout.php">
             <svg class="logout_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 490.693 490.693" style="enable-background:new 0 0 490.693 490.693; fill:#fff;" xml:space="preserve">
                         <g>
                             <path d="M289.6,373.453c-6.613-0.96-12.267,4.16-12.267,10.56v74.667h-256V32.013h256v74.347c0,5.333,3.84,10.133,9.067,10.88     c6.613,0.96,12.267-4.16,12.267-10.56V21.347c0-5.867-4.8-10.667-10.667-10.667H10.667C4.8,10.68,0,15.48,0,21.347v448     c0,5.867,4.8,10.667,10.667,10.667H288c5.867,0,10.667-4.8,10.667-10.667v-85.013C298.667,379,294.827,374.2,289.6,373.453z"></path>

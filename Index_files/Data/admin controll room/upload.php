@@ -3,7 +3,7 @@ include '../../../Index_files/Data/connection.php';
 if(isset($_POST['submit']))
 {   
 
-            $destfile = "https://pure-health-natural-products.000webhostapp.com/Index_files/Data/admin%20controll%20room/upload/";
+            $destfile = "./upload/";
     $product_name=$_POST['product_name'];
     $price = $_POST['price'];
     $description = $_POST['description'];

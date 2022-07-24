@@ -1,9 +1,10 @@
 <?php
 include '../connection.php';
 session_start();
-if(!isset($_SESSION['AdminLoginId']))
+$username =  $_SESSION['username'];
+if(!isset($_SESSION['logged_in']))
 {
-    header("location: Admin Login.php");
+    header("location: signin.php");
 }
 ?>
     <meta charset="UTF-8">
@@ -105,6 +106,7 @@ if(!isset($_SESSION['AdminLoginId']))
 {
     display: flex;
     align-items: center;
+        text-decoration: none;
 }
 #left_div
 {
@@ -257,7 +259,7 @@ main #flex-container
         <div id="right_div">
      <form style="cursor: pointer;" method="post" action="../../Data/account and card/logout.php">
         <div id="right_div" style="cursor: pointer;" >
-            <a href="https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/logout.php">
+            <a href="./logout.php">
             <svg class="logout_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 490.693 490.693" style="enable-background:new 0 0 490.693 490.693;" xml:space="preserve">
                         <g>
                             <path d="M289.6,373.453c-6.613-0.96-12.267,4.16-12.267,10.56v74.667h-256V32.013h256v74.347c0,5.333,3.84,10.133,9.067,10.88     c6.613,0.96,12.267-4.16,12.267-10.56V21.347c0-5.867-4.8-10.667-10.667-10.667H10.667C4.8,10.68,0,15.48,0,21.347v448     c0,5.867,4.8,10.667,10.667,10.667H288c5.867,0,10.667-4.8,10.667-10.667v-85.013C298.667,379,294.827,374.2,289.6,373.453z"></path>
@@ -277,11 +279,11 @@ main #flex-container
         <th>Order Id</th>
         <th>Delivery Status</th>
         <th>Date</th>
-        <th>Refund Status</th>
+        <th>Operation</th>
         </tr>
         
         <?php
-    $productquery = "SELECT * FROM orders where delivery_status = 'Delivered'  AND refund = 'Pending'";
+    $productquery = "SELECT * FROM orders where username='$username' AND delivery_status = 'Delivered' AND refund IS NULL";
     $productresult = mysqli_query($con,$productquery);
 if($productresult)
 {
@@ -299,7 +301,7 @@ if($productresult)
         <th><?php echo $res['delivery_status']?></th>
         <th><?php echo $res['date']?></th>
         <th>
-            <form action='manage_refund.php' method = 'POST'>
+            <form action='refundb.php' method = 'POST'>
                 <input type='hidden' name='order_id' value='<?php echo $res['order_id']?>'>
                  <input type='submit' name='submit' value='Refund' style='border: none;background: #F25456;color:#fff; height: 2rem; width: 6rem; font-size: 1.1rem; cursor: pointer; '>
             </form>

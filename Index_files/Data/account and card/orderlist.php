@@ -105,8 +105,8 @@ if(!isset($_SESSION['logged_in']))
 #left_div, #right_div a
 {
     display: flex;
-    align-items: center;
         text-decoration: none;
+    align-items: center;
 }
 #left_div
 {
@@ -259,13 +259,13 @@ main #flex-container
         <div id="right_div">
      <form style="cursor: pointer;" method="post" action="../../Data/account and card/logout.php">
         <div id="right_div" style="cursor: pointer;" >
-            <a href="https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/logout.php">
+            <a href="./logout.php">
             <svg class="logout_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 490.693 490.693" style="enable-background:new 0 0 490.693 490.693;" xml:space="preserve">
                         <g>
                             <path d="M289.6,373.453c-6.613-0.96-12.267,4.16-12.267,10.56v74.667h-256V32.013h256v74.347c0,5.333,3.84,10.133,9.067,10.88     c6.613,0.96,12.267-4.16,12.267-10.56V21.347c0-5.867-4.8-10.667-10.667-10.667H10.667C4.8,10.68,0,15.48,0,21.347v448     c0,5.867,4.8,10.667,10.667,10.667H288c5.867,0,10.667-4.8,10.667-10.667v-85.013C298.667,379,294.827,374.2,289.6,373.453z"></path>
                             <path d="M487.573,237.88L380.907,131.213c-4.267-4.053-10.987-3.947-15.04,0.213c-3.947,4.16-3.947,10.667,0,14.827     l88.427,88.427H128.32c-5.227,0-9.92,3.627-10.773,8.853c-1.173,6.72,4.053,12.48,10.56,12.48H454.4l-88.533,88.427     c-4.267,4.053-4.373,10.88-0.213,15.04c4.053,4.267,10.88,4.373,15.04,0.213c0.107-0.107,0.213-0.213,0.213-0.213     l106.667-106.667C491.733,248.867,491.733,242.04,487.573,237.88z"></path>
                         </g></svg>
-            <button style='text-decoration:none;' id="logout_btn" ><h3>Log Out</h3></button></a>
+            <button id="logout_btn" ><h3>Log Out</h3></button></a>
         </div>
 </form>
         </div>
@@ -279,11 +279,11 @@ main #flex-container
         <th>Order Id</th>
         <th>Delivery Status</th>
         <th>Date</th>
-        <th>Refund Status</th>
+        <th>Operation</th>
         </tr>
         
         <?php
-    $productquery = "SELECT * FROM orders where username='$username' AND delivery_status = 'Delivered'  AND refund = 'Refund Successful'";
+    $productquery = "SELECT * FROM orders where username='$username' AND delivery_status = 'Pending'";
     $productresult = mysqli_query($con,$productquery);
 if($productresult)
 {
@@ -300,7 +300,15 @@ if($productresult)
         <th><?php echo $res['order_id']?></th>
         <th><?php echo $res['delivery_status']?></th>
         <th><?php echo $res['date']?></th>
-        <th><?php echo $res['refund']?></th>
+        <th>
+        <form method="post" action="remove_product.php" id="cancel_btn">
+              <button type='submit' name='Del_order'>
+          <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" ><path d="M 25 2 C 12.309534 2 2 12.309534 2 25 C 2 37.690466 12.309534 48 25 48 C 37.690466 48 48 37.690466 48 25 C 48 12.309534 37.690466 2 25 2 z M 25 4 C 36.609534 4 46 13.390466 46 25 C 46 36.609534 36.609534 46 25 46 C 13.390466 46 4 36.609534 4 25 C 4 13.390466 13.390466 4 25 4 z M 32.990234 15.986328 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.990234 15.986328 z"></path></svg>
+        <input type='hidden' name='order_id' value='<?php echo $res['order_id']?>'>
+    </div></button></form>
+
+        </th>
         </tr>
         <?php
         }

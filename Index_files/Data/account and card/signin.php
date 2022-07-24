@@ -16,47 +16,59 @@ require('../../Data/connection.php');
             background: #00c900;
             padding: 0%
         }
+
         #loading {
-          border: 16px solid #f3f3f3;
-          border-radius: 50%;
-          border-top: 16px solid #3BD16F;
-          border-bottom: 16px solid #3BD16F;
-          width: 120px;
-          height: 120px;
-          -webkit-animation: spin 2s linear infinite;
-          animation: spin 1s linear infinite;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3BD16F;
+            border-bottom: 16px solid #3BD16F;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 1s linear infinite;
 
         }
-        #loading_holder
-        {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100vh;
-          transition: opacity 0.7s;
-          overflow:  hidden;
+
+        #loading_holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            transition: opacity 0.7s;
+            overflow: hidden;
         }
 
         @-webkit-keyframes spin {
-          0% { -webkit-transform: rotate(0deg); }
-          100% { -webkit-transform: rotate(360deg); }
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
         }
-        
+
         @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
+
         @media screen and (max-width:400px) {
             #loading {
 
-            width: 80px;
-          height: 80px;
+                width: 80px;
+                height: 80px;
             }
         }
 
         .signIn_holder,
-        .forget_holder{
+        .forget_holder {
             background: rgb(255, 255, 255);
             width: 29.6rem;
             height: 100vh;
@@ -71,12 +83,14 @@ require('../../Data/connection.php');
         .hidden {
             display: none;
         }
+
         .leftDiv form,
         .rightDiv form {
             text-align: center;
         }
 
-        input,a {
+        input,
+        a {
             margin-bottom: 2rem;
         }
 
@@ -105,10 +119,11 @@ require('../../Data/connection.php');
             font-size: 1.2rem;
             cursor: pointer;
         }
-        #br{
+
+        #br {
             display: none;
         }
-        
+
         #forget,
         #signUp,
         #signIn,
@@ -117,72 +132,77 @@ require('../../Data/connection.php');
             color: #00c900;
             font-size: 1.1em;
             cursor: pointer;
-            font-family: sans-serif; 
-  
-               }
-         .heading
-         {
-           font-family: sans-serif; 
-           color: #00c900;
-         }
-        .forget_btn
-        {
+            font-family: sans-serif;
+
+        }
+
+        .heading {
+            font-family: sans-serif;
+            color: #00c900;
+        }
+
+        .forget_btn {
             margin-left: 5%;
         }
-    @media screen and (max-width:475px) {
-        body {
-            background: #fff;
+
+        @media screen and (max-width:475px) {
+            body {
+                background: #fff;
+            }
+
+            .signIn_holder {
+                width: 100%;
+                padding: 2rem;
+            }
         }
-        .signIn_holder{
-            width: 100%;
-            padding: 2rem;
+
+        @media screen and (max-width:300px) {
+            #br {
+                display: inline;
+            }
         }
-    }
-    @media screen and (max-width:300px) {
-            #br{
-            display: inline;
-        }
-    }
-    }
     </style>
 </head>
 
 <body onload="loader()">
     <div id="loading_holder">
-    <div id="loading"></div>
-</div>
-    <script >
+        <div id="loading"></div>
+    </div>
+    <script>
         var preloader = document.getElementById('loading_holder');
-     function loader()
-     {
-       preloader.style.display="none";
 
-     }
-     </script>
+        function loader() {
+            preloader.style.display = "none";
+
+        }
+    </script>
     <div id="form_div">
         <div class="signIn_holder">
             <div class="leftDiv">
-            <h2 class='heading'>Login</h2>
+                <h2 class='heading'>Login</h2>
                 <form action="login_register.php" method="post">
-                    <input type="text" placeholder="Email or Username*" name="email_username" class="form_input" require>
+                    <input type="text" placeholder="Email or Username*" name="email_username" class="form_input"
+                        require>
                     <input type="password" placeholder="Password *" name="password" class="form_input" require>
                     <input type="submit" name="login" value="Submit" id="submit_btn" class="form_btn">
-                    <a class="form_btn" href="./signup.php" id='signUp' >Sign Up</a><br id="br">
-                   <a class="form_btn forget_btn" href="" id="forget" class="">Forgot password?</a>
+                    <a class="form_btn" href="./signup.php" id='signUp'>Sign Up</a><br id="br">
+                    <a class="form_btn forget_btn" href="" id="forget" class="">Forgot password?</a>
+                    <a class="form_btn forget_btn" href="../../../index.php" id="forget">Home</a>
+
                 </form>
             </div>
         </div>
     </div>
     <div class="forget_holder hidden">
-            <div class="rightDiv">
-                <h2 class='heading'>Reset password</h2>
-                <form action="forgotpassword.php" method="post">
-                    <input type="email" name="email" class="form_input" placeholder="Enter Your Email *" require>
-                    <input type="submit" name="send-reset-link" value="Reset Password" id="submit_btn" class="form_btn">
-                    <a class="form_btn" href="" id="signIn">Sign In</a>
-                </form>
-            </div>
+        <div class="rightDiv">
+            <h2 class='heading'>Reset password</h2>
+            <form action="forgotpassword.php" method="post">
+                <input type="email" name="email" class="form_input" placeholder="Enter Your Email *" require>
+                <input type="submit" name="send-reset-link" value="Reset Password" id="submit_btn" class="form_btn">
+                <a class="form_btn" href="" id="signIn">Sign In</a>
+            </form>
         </div>
+    </div>
 
 </body>
 <script>
@@ -201,4 +221,5 @@ require('../../Data/connection.php');
         signIn_holder.classList.toggle('hidden');
     })
 </script>
+
 </html>

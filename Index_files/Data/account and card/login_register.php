@@ -35,7 +35,7 @@ function sendMail($email,$v_code)
         $mail->Body    = "
         Thanks for your registration!<br>
         click the link below to verify the email address <br>
-        <a href='https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/verify.php?email=$email&v_code=$v_code'>Verify</a>";    
+        <a href='./verify.php?email=$email&v_code=$v_code'>Verify</a>";    
 
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     

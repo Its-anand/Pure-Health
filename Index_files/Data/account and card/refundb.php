@@ -25,7 +25,7 @@ $result_fetch=mysqli_fetch_array($result);
             echo"
             <script>
             alert('Refund Process is started');
-            window.location.href='https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/ordered_product.php';
+            window.location.href='./ordered_product.php';
             </script>
             "; 
             }
@@ -34,7 +34,7 @@ $result_fetch=mysqli_fetch_array($result);
             echo"
             <script>
             alert('Unable To Proceed');
-            window.location.href='https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/ordered_product.php';
+            window.location.href='./ordered_product.php';
             </script>
             ";  
             }
@@ -44,7 +44,7 @@ $result_fetch=mysqli_fetch_array($result);
             echo"
             <script>
             alert('Unknown error');
-            window.location.href='https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/ordered_product.php';
+            window.location.href='./ordered_product.php';
             </script>
             ";  
         }
@@ -54,7 +54,7 @@ $result_fetch=mysqli_fetch_array($result);
         echo"
         <script>
         alert('Product not found');
-        window.location.href='https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/ordered_product.php';
+        window.location.href='./ordered_product.php';
         </script>
         "; 
     }   
@@ -65,7 +65,7 @@ else
         echo"
         <script>
         alert('Click the cancel button first');
-        window.location.href='https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/ordered_product.php';
+        window.location.href='./ordered_product.php';
         </script>
         "; 
     }

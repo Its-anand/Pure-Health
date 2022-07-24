@@ -31,7 +31,7 @@
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Password reset Link - Pure Health';
-        $mail->Body = "Click on 'Reset Password' button to reset password-<br><a href='https://pure-health-natural-products.000webhostapp.com/Index_files/Data/account%20and%20card/updatepassword.php?email=$email&reset_token=$reset_token'><button>Rest Password</button></a>";
+        $mail->Body = "Click on 'Reset Password' button to reset password-<br><a href='./updatepassword.php?email=$email&reset_token=$reset_token'><button>Rest Password</button></a>";
 
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         $mail->send();

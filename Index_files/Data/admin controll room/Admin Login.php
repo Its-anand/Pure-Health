@@ -149,7 +149,7 @@ if(isset($_POST['Signin']))
         $result_fetch=mysqli_fetch_assoc($result);
         session_start();
         $_SESSION['AdminLoginId']=$result_fetch['Admin_name'];
-        header("location: AdmiPanel.php");
+        header("location: Admin Panel.php");
         }
         else
         {

@@ -240,9 +240,9 @@ background:#000;
         <path id="wavepath" d="M0,0  L110,0C35,150 35,0 0,100z" fill="#000"></path>
         </svg>
         <div id="button_holder">
-        <form target="_blank" action="https://pure-health-natural-products.000webhostapp.com/Index_files/Data/admin%20controll%20room/orders.php" method="post"><button value="submit" id="submit_btn" class="form_btn">All Orders</button></form>
-        <form target="_blank" action="https://pure-health-natural-products.000webhostapp.com/Index_files/Data/admin%20controll%20room/refunds.php" method="post"><button value="submit" id="submit_btn" class="form_btn">Refunds List</button></form>
-        <form target="_blank" action="https://pure-health-natural-products.000webhostapp.com/Index_files/Data/admin%20controll%20room/refundlist.php" method="post"><button value="submit" id="submit_btn" class="form_btn">Refunded Products</button></form>
+        <form target="_blank" action="./orders.php" method="post"><button value="submit" id="submit_btn" class="form_btn">All Orders</button></form>
+        <form target="_blank" action="./refunds.php" method="post"><button value="submit" id="submit_btn" class="form_btn">Refunds List</button></form>
+        <form target="_blank" action="./refundlist.php" method="post"><button value="submit" id="submit_btn" class="form_btn">Refunded Products</button></form>
     </div>
     </div>
     </div>

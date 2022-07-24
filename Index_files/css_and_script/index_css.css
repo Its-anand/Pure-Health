@@ -24,7 +24,7 @@ background-color: #fff;
 }
 h1,h2
 {
-  color: #00c900;
+  color: #2AB960;
   font-weight: 100;
 }
 /* ......... --- ScrollBar Start --- ......... */
@@ -81,7 +81,7 @@ header #logo-img
 header .logo-text
 {
   font-size: 1.6rem;
-  color: #00c900;
+  color: #2AB960;
   position: absolute;
   top: 35px;
   line-height: 1.10;
@@ -137,7 +137,7 @@ header #fheader /*To put navigation on top*/
 {
   width: 100%;
   height: 40%;
-  background-color: #00c900;
+  background-color: #2AB960;
   border-radius: 40%;
   border-top-left-radius:0 ;
   border-top-right-radius:0 ;
@@ -161,16 +161,16 @@ left: 5.6rem;
   margin-top: 20px;
   width: 10rem;
   height: 2rem;
-  border: 2px #00c900 solid;
+  border: 2px #2AB960 solid;
   background-color: transparent;
-  color: #00c900;
+  color: #2AB960;
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
 }
 .account_button_signin:hover
 {
-  background-color: #00c900;
+  background-color: #2AB960;
   color: #fff;
   animation-name:fadein;
   animation-duration:.4s;  
@@ -180,10 +180,10 @@ header #account_button
   margin: 47px 41px 0px 0px;
   float: right;
   background-color: transparent;
-  border:3px solid #00c900;
+  border:3px solid #2AB960;
   display: block;
   font-weight: 400;
-  color: #00c900;
+  color: #2AB960;
   text-align: center;
   border-radius: 30px;
   width: 130px;
@@ -194,7 +194,7 @@ header #account_button
 }
 header #account_button:hover /*Hover effect of buy button*/
 {
-  background-color: #00c900;
+  background-color: #2AB960;
   color: white;
   animation-name:fadein;
   animation-duration:.4s;  
@@ -281,7 +281,7 @@ header #navholder
 {
     background-color: #d9eee1;
     padding-top: 3.5rem;
-    height: 35rem;
+    height: 37rem;
     font-weight: 500;
     display: flex;
     justify-content: center;
@@ -290,7 +290,8 @@ header #navholder
 .text-box h1
 {
     margin:0px;
-    font-size: 4rem;
+    font-size: 2.3rem;
+    font-weight: 600;
 }
 .bgsvg
 {
@@ -298,24 +299,25 @@ header #navholder
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 20rem;
+    height: 7rem;
     z-index: -1;
 }
 .bgsvg1
 {
-  height: 17rem;
+  height: 7rem;
   z-index: -1;
 }
 #thought_svg
 {
   background-color: #D9EEE1;
-  height: 5rem;
-    margin-bottom: -10px;
+  width: 100%;
+  margin-bottom: -10px;
 
 }
 #thought_svg_bottom
 {
-  margin-bottom: 20em;
+  margin-top: -1px;
+  margin-bottom: 8em;
 }
 header nav
 {
@@ -324,7 +326,7 @@ header nav
   color: #fff;
   z-index: 10;
   position: relative;
-  background: rgba(0,201,0,.9);
+  background: #2ab960;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -367,10 +369,10 @@ header nav #table1, #table2
 header nav #table1 input {
   box-sizing: border-box;
   background-color: #fff;
-  border: 1px solid #00c900;
+  border: 1px solid #2AB960;
   font-weight: 300;
   font-size: 1.2rem;
-  color: #00c900;
+  color: #2AB960;
   text-align: center;
   border-radius: 30px;
   width: 130px;
@@ -382,7 +384,7 @@ header nav #table1 input {
 header nav #table1 input:hover/*hover effect of input*/
 {
   color: #fff;
-  background-color: #00c900;
+  background-color: #2AB960;
   border:1px solid #fff;
 
 }
@@ -411,10 +413,10 @@ nav ul table #twitter:hover
 main #bgimg /*For background image*/
 {
     
-    height: 100vh;
+    height: 90vh;
     text-align: center;
     font-size: calc(0.75em + 8vmin);
-    color: #00c900;
+    color: #2AB960;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -433,7 +435,7 @@ main #bgimg /*For background image*/
 /* ......... ---  Thought  --- ......... */
 main #thought
 {
-  padding: 7% 0 0 0;
+  padding: 3% 0 0 0;
   background-color:#d9eee1;
   text-align: center;
   font-size: calc(0.75em + 1.4vmin);
@@ -454,7 +456,6 @@ main .posts
 {
   width: 100%;  
   box-sizing: border-box;
-
 }
 main .posts #post
 {  
@@ -463,7 +464,7 @@ main .posts #post
 } 
 main #flex-container
 {
-  margin: 4% 9.5% 2% 9.5%;
+  margin: 4% 14% 2% 14%;
 
 }
 main #flex
@@ -516,7 +517,7 @@ main .posts p
 main .posts #price
 {
   text-align: center;
-  background-color: #00C900;
+  background-color: #2aba60;
   font-weight: normal;
   font-size: 1.25em;
   margin-top: 10px;
@@ -642,7 +643,7 @@ main #aboutus .about-text
  #contact_form input
 {
   border: none;
-  border: 2px solid #00c900;
+  border: 2px solid #2AB960;
   height: 6.6vh;
   outline: none;
   font-size: 2.5vh;
@@ -657,7 +658,7 @@ main #aboutus .about-text
 #message
 {
   border: none;
-  border: 2px solid #00c900;
+  border: 2px solid #2AB960;
   padding: 10px;
   width: 75%;
   margin-bottom: 8%;
@@ -683,7 +684,7 @@ main #aboutus .about-text
 {
   z-index: -10;
   width: 100%;
-  background-color: #00C900;
+  background-color: #2AB960;
   min-height: 200px;
   box-sizing: border-box;
 }
@@ -1060,7 +1061,7 @@ header #account_button
 header .logo-text
 {
   font-size: 1.35em;
-  color: #00c900;
+  color: #2AB960;
   top: 27px;
   line-height: 1.10;
 }

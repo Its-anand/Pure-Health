@@ -279,16 +279,18 @@ header #navholder
 
 .text-box
 {
-    text-align: center;
     background-color: #d9eee1;
-    margin: 0px;
-    padding: 3.5rem 0 0 0;
-    height: 5rem;
+    padding-top: 3.5rem;
+    height: 35rem;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .text-box h1
 {
     margin:0px;
+    font-size: 4rem;
 }
 .bgsvg
 {

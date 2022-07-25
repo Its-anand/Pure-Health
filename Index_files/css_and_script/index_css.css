@@ -937,7 +937,10 @@ nav ul table .social-media-page
 {
   width: 22rem;
 }
-
+.text-box
+{
+  height: 20rem;
+}
 #search_bar
 {
   width: 20rem;
@@ -1004,7 +1007,8 @@ nav ul table .social-media-page
  .text-box
  {
  font-size: 5vw;
- padding: 5rem 0 0 0;
+ padding: 3rem 0 0 0;
+ height: 5rem;
  }
   header #logo
   {
@@ -1120,6 +1124,10 @@ header #nav-button
  #search_result
 {
         width: 17rem;
+}
+.text-box
+{
+  padding: 1rem 0 0 0;
 }
 }
 @media screen and (max-width:311px)

@@ -12,6 +12,7 @@
   <?php
 include './Index_files/Data/connection.php';
 session_start();
+echo "$_SESSION[UserLoginId]";
 ?>
 </head>
 

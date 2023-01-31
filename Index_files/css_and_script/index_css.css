@@ -429,7 +429,7 @@ main #bgimg /*For background image*/
   {
     font-size: 6vw;
     font-size: calc(0.75em + 6.3vmin);
-    height:calc(100vh - 100px);
+    height:calc(100vh - 40px);
   }  
 }
 /* ......... ---  Thought  --- ......... */
@@ -1007,7 +1007,7 @@ nav ul table .social-media-page
  .text-box
  {
  font-size: 5vw;
- padding: 3rem 0 0 0;
+ padding: 1rem 0 0 0;
  height: 5rem;
  }
   header #logo

@@ -202,7 +202,6 @@ $res = mysqli_fetch_array($query);
 ?>
     <!--PHP ENDS-->
 
-
     <div class="posts">
       <h1 id="post">- Products -</h1>
       <div id='flex-container'>
@@ -212,7 +211,6 @@ $res = mysqli_fetch_array($query);
     $productresult = mysqli_query($con,$productquery);
 if($productresult)
 {
-
     if(mysqli_num_rows($productresult)>0)
     {
         while($res = mysqli_fetch_array($productresult))

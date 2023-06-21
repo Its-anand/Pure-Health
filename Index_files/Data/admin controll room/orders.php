@@ -272,7 +272,7 @@ main #flex-container
         </div>
     </div></div>
     <div id='table_holder'>
-    <table  >
+    <table>
         <tr id='firstth'>
         <th>Username</th>
         <th>Email</th>

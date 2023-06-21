@@ -46,7 +46,7 @@ if(isset($_POST['buynow']))
           $product_name =$_POST['product_name'];
           $product_price = $_POST['product_price'];
           $product_id =$_POST['product_id'];
-          $api_key = "rzp_test_rxfcWRod9TA6G5";
+          $api_key = "Add API KEY HERE"; //Add your api key here which you got from razor pay.
           
           date_default_timezone_set('Asia/kolkata');
           $date=date("Y-m-d");

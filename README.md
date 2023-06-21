@@ -1,5 +1,3 @@
-Here is a possible readme for your project:
-
 # Pure-Health E-commerce Website
 
 This is a simple e-commerce website that allows users to browse, search and buy products online and even refund. It is built with HTML, CSS, JavaScript, PHP and Razorpay payment gateway.

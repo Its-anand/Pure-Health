@@ -19,10 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `id18749980_account`
+-- Database: `pureheal_bd`
 --
-CREATE DATABASE IF NOT EXISTS `id18749980_account` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `id18749980_account`;
+CREATE DATABASE IF NOT EXISTS `pureheal_bd` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `pureheal_bd`;
 
 -- --------------------------------------------------------
 

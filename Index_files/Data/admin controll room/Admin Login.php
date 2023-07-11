@@ -12,7 +12,9 @@ session_start();
     <style>
         body {
             margin: 0;
-            background: #00c900;
+            background: url(../../Image/admin\ Background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;            
             padding: 0%
         }
 
@@ -104,7 +106,7 @@ session_start();
             display: inline;
         }
     }
-    }
+    
     </style>
 </head>
 

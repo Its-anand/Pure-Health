@@ -186,14 +186,13 @@ require('../../Data/connection.php');
                     <input type="password" placeholder="Password *" name="password" class="form_input" require>
                     <input type="submit" name="login" value="Submit" id="submit_btn" class="form_btn">
                     <a class="form_btn" href="./signup.php" id='signUp'>Sign Up</a><br id="br">
-                    <a class="form_btn forget_btn" href="" id="forget" class="">Forgot password?</a>
-                    <a class="form_btn forget_btn" href="../../../index.php" id="forget">Home</a>
-
+                    <!-- <a class="form_btn forget_btn" href="" id="forget" class="">Forgot password?</a> -->
+                    <!-- <a class="form_btn forget_btn" href="../../../index.php" id="forget">Home</a> -->
                 </form>
             </div>
         </div>
     </div>
-    <div class="forget_holder hidden">
+    <!--<div class="forget_holder hidden">
         <div class="rightDiv">
             <h2 class='heading'>Reset password</h2>
             <form action="forgotpassword.php" method="post">
@@ -202,14 +201,14 @@ require('../../Data/connection.php');
                 <a class="form_btn" href="" id="signIn">Sign In</a>
             </form>
         </div>
-    </div>
+    </div>-->
 
 </body>
 <script>
-    var forget = document.getElementById("forget");
-    var signIn_holder = document.getElementsByClassName("signIn_holder")[0];
-    var signIn = document.getElementById("signIn");
-    var forget_holder = document.getElementsByClassName("forget_holder")[0];
+    let forget = document.getElementById("forget");
+    let signIn_holder = document.getElementsByClassName("signIn_holder")[0];
+    let signIn = document.getElementById("signIn");
+    let forget_holder = document.getElementsByClassName("forget_holder")[0];
     forget.addEventListener('click', (e) => {
         e.preventDefault();
         forget_holder.classList.toggle('hidden');

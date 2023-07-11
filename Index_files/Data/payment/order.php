@@ -1,12 +1,12 @@
 <?php
 require('../../Data/connection.php');
 session_start();
-$user_id = $_SESSION['username'];
+/*$user_id = $_SESSION['username'];
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
+*/
 if(!isset($_SESSION['logged_in']))
 {
     header("location: ../account and card/signin.php");
@@ -32,7 +32,7 @@ $result = mysqli_query($con,$query);
         $product_price = $_POST['product_price'];
         $delivery_status = $_POST['payment_status'];
         
-           function sendMail($email)
+   /*        function sendMail($email)
    {
     require ('../../Data/contactus/PHPMailer/Exception.php');
     require ('../../Data/contactus/PHPMailer/PHPMailer.php');
@@ -73,12 +73,12 @@ $result = mysqli_query($con,$query);
     } catch (Exception $e) {
         return false;
     }
-   }
+   }*/
         
         
              $query="INSERT INTO `orders`(`date`, `name`, `username`, `number`, `email`, `address`, `pincode`, `product_id`, `order_id`, `product_name`, `product_counter`, `product_price`, `payment_status`,`delivery_status`) VALUES ('$date','$name','$username','$number','$email','$address','$pincode','$product_id','$order_id','$product_name','$product_counter','$product_price','1','Pending')";
              $res = mysqli_query($con,$query);
-             if($res && sendMail($email))
+             if($res /*Php code was here*/)//this code -> && sendMail($email)
          {
             echo"
             <script>

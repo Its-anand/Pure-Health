@@ -2,7 +2,7 @@
 $server = "localhost";
 $username = "root";
 $password = "";
-$db = "id18749980_account";
+$db = "pureheal_bd";
 $con = new mysqli($server, $username, $password, $db);
 mysqli_set_charset($con, "utf8");
 /*if ($con->connect_error) {

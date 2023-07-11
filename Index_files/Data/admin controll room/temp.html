@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            height: 100vh;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 3.5rem 1fr;
+            grid-template-rows: 3.5rem 1fr;
+            background-color: #d0eefe;
+            font-family: sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: #1A3C5D;
+        }
+        header{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            display: flex;
+            justify-content: center;
+        }
+        header div{
+            width: 90%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            font-weight: bolder;
+            font-size: 1.5rem;
+            color: #1A3C5D;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+
+        main{
+            background-color: #F3F9FE;
+            
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 3px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            
+        }
+        .welcome--text-container{
+            justify-self: center;
+            align-self: center;
+            text-align: center;
+            font-size: 4.5rem;
+            color: #1A3C5D;
+        }
+        .form--container{
+            justify-self: center;
+            align-self: center;
+            color: #1A3C5D;
+        }
+        .form--container form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 3px solid #000;
+            border-radius: 5px;
+            width: 25rem;
+            height: 30rem;
+        }
+        .form--container form h2{
+            font-size: 2rem;
+            
+        }
+        .form--container form input{
+            width: 80%;
+            height: 3rem;
+            border-radius: 5px;
+            border: 1px solid #000;
+            margin-bottom: 1rem;
+            padding-left: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            background: none;
+            }
+            #submit_btn{
+                width: 83.5%;
+            }
+            #submit_btn:active{
+                outline: 1px solid #000;
+            }
+            @media screen and (max-width: 996px){
+                .welcome--text-container{
+                    display: none;
+                }
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="../../../index.php"> <p>Pure Health</p></a>
+            <a href="../../../index.php"><img src="../../Image/Arrow 1.svg" alt="back button"></a>
+            
+        </div>
+    </header>
+    <aside></aside>
+    <main>
+        <section class="welcome--text-container">
+                <h1>Welcome <br> Back</h1>
+        </section>
+        <section class="form--container">
+            <form method="post" action="#">
+                <h2>Admin Login</h2>
+                <input type="text" placeholder="Email or Username*" name="email_username" class="form_input" require>
+                <input type="password" placeholder="Password *" name="password" class="form_input" require>
+                <input type="submit" name="Signin" value="Submit" id="submit_btn" class="form_btn">
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

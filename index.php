@@ -94,12 +94,12 @@ session_start();
             <li class="nav-bar">Home</li>
           </a>
           <a href="#post">
-            <li class="nav-bar">Buy Products</li>
+            <li class="nav-bar" onclick="closemenu()">Buy Products</li>
           </a>
-          <a href="#aboutus-holder">
+          <a href="#aboutus-holder" onclick="closemenu()">
             <li class="nav-bar">About Us</li>
           </a>
-          <a href="#footer1">
+          <a href="#footer1" onclick="closemenu()">
             <li class="nav-bar">Contact Us</li>
           </a>
           <a href="./Index_files/Data/admin controll room/Admin Panel.php">
@@ -185,12 +185,10 @@ session_start();
         <path id="wavepath" d="M0,0  L110,0C35,150 35,0 0,100z" fill="#fff"></path>
       </svg>
     </div>
-    <div class="text-box">
-      <h1><span class="auto-input"></span></h1>
+    <div class="thought_img_container">
+        <h1>-Why our products-</h1>
+      <img src="./Index_files/Image/thought_img.webp" alt="">
     </div>
-    <svg class="bgsvg1" width="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <path id="wavepath" d="M0,0  L110,0C35,150 35,0 0,100z" fill="#d9eee1"></path>
-    </svg>
 
 
     <!--PHP START-->
@@ -241,11 +239,11 @@ if($productresult)
 </svg>
     </div>
     <div id="thought">
-      <h1>- Our Products -</h1>
-      <p>We sell the best product at low price because our priority is your health not your money. <br>All of our
-        Products are verified and are completely safe to use. <br>Please feel free to buy any product at bare minimum
-        price with top notch quality.</p>
-      <img src="./Index_files/Image/thought_img.webp" alt="">
+    <div class="text-box">
+            <h1><span class="auto-input"></span></h1>
+        </div>
+
+
     </div>
     <svg id="thought_svg_bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1897 200" xml:space="preserve">
 
@@ -285,7 +283,7 @@ if($productresult)
           }
           if(isset($_GET['success']))
           {
-              $msg="Message is sended successfully";
+              $msg="message is sent successfully.";
               echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
               ;
           }

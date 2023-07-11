@@ -1,7 +1,7 @@
 <?php
-require('../../Data/connection.php');
+ require('../../Data/connection.php');
 session_start();
-use PHPMailer\PHPMailer\PHPMailer;
+/*use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 function sendMail($email,$v_code)
@@ -16,15 +16,15 @@ function sendMail($email,$v_code)
     try {
         //Server settings
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->Host       = 'cloud2.googiehost.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 't4tempdata';                     //SMTP username
-        $mail->Password   = 'qhjlccmogtdbhkok';                               //SMTP password EX- t4temp@123
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+        $mail->Username   = 'no-reply@purehealth.c1.is';                     //SMTP username
+        $mail->Password   = 'z5U0q6M!aZMa';                               //SMTP password EX- t4temp@123
+        $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
-        $mail->setFrom('t4tempdata@gmail.com', 't4tempdata');
+        $mail->setFrom('no-reply@purehealth.c1.is', 'purehealth');
         $mail->addAddress($email);     //Add a recipient
     
         //Attachments
@@ -44,7 +44,7 @@ function sendMail($email,$v_code)
     } catch (Exception $e) {
         return false;
     }
-   }
+   }*/
 #This is the code for login
 if(isset($_POST['login']))
 {
@@ -56,7 +56,7 @@ if(isset($_POST['login']))
         if(mysqli_num_rows($result)==1)
         {
             $result_fetch=mysqli_fetch_assoc($result);
-
+            echo($result_fetch['password']);
             if($result_fetch['is_verified']==1)
             {
                 if(password_verify($_POST['password'],$result_fetch['password']))
@@ -73,7 +73,7 @@ if(isset($_POST['login']))
                     echo"
                     <script>
                         alert('Password is incorrect');
-                        window.location.href='signin.php';
+                        // window.location.href='signin.php';
                     </script>
                 ";
                 }
@@ -142,14 +142,14 @@ if(isset($_POST['register']))
         }
         else
         {
-         $password=password_hash($_POST['password'],PASSWORD_BCRYPT); 
-         $v_code= bin2hex(random_bytes(16));  
-         $query="INSERT INTO `registered_users`(`full_name`, `username`, `number`, `email`, `password`, `address`, `pincode`, `verification_code`, `is_verified`) VALUES ('$_POST[fullname]','$_POST[username]','$_POST[number]','$_POST[email]','$password','$_POST[address]','$_POST[pincode]','$v_code','0')";
-         if(mysqli_query($con,$query) && sendMail($_POST['email'],$v_code))
+          $password=password_hash($_POST['password'],PASSWORD_BCRYPT); 
+        //  $v_code= bin2hex(random_bytes(16));  
+         $query="INSERT INTO `registered_users`(`full_name`, `username`, `number`, `email`, `password`, `address`, `pincode`, /*`verification_code`,*/ `is_verified`) VALUES ('$_POST[fullname]','$_POST[username]','$_POST[number]','$_POST[email]','$password','$_POST[address]','$_POST[pincode]',/*'$v_code',*/'1')";
+         if(mysqli_query($con,$query) /*php mailer code was here*/) // this code -> && sendMail($_POST['email'],$v_code)
          {
             echo"
             <script>
-            alert('Registration successful! Please check your email to verify your account');
+            alert('Registration successful! ');
             window.location.href='signup.php';
             </script>
             ";
@@ -158,7 +158,7 @@ if(isset($_POST['register']))
          {
             echo"
             <script>
-                alert('Sorry Unknown error!2');
+                alert('[Email service or database not working]');
                 window.location.href='signup.php';
             </script>
             ";
@@ -169,7 +169,7 @@ if(isset($_POST['register']))
     {
         echo"
             <script>
-                alert('Sorry Unknown error!3');
+                alert('Unable to put data into database');
                 window.location.href='signup.php';
             </script>
         ";

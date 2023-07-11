@@ -280,19 +280,30 @@ header #navholder
 .text-box
 {
     background-color: #d9eee1;
-    padding-top: 3.5rem;
-    height: 37rem;
+    padding: 10rem 0;
+    height: 7rem;
     font-weight: 500;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.text-box h1
-{
-    margin:0px;
-    font-size: 2.3rem;
-    font-weight: 600;
+.thought_img_container{
+  background-color: #d9eee1;
+  
+  height: 55rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.thought_img_container h1{
+  font-weight: bolder;
+  padding-bottom: 3.5rem;
+  color: #000;
+}
+
 .bgsvg
 {
     background-color:#D9EEE1;
@@ -311,7 +322,7 @@ header #navholder
 {
   background-color: #D9EEE1;
   width: 100%;
-  margin-bottom: -10px;
+  margin-bottom: -40px;
 
 }
 #thought_svg_bottom
@@ -435,7 +446,6 @@ main #bgimg /*For background image*/
 /* ......... ---  Thought  --- ......... */
 main #thought
 {
-  padding: 3% 0 0 0;
   background-color:#d9eee1;
   text-align: center;
   font-size: calc(0.75em + 1.4vmin);
@@ -445,7 +455,7 @@ main #thought p
   font-weight: 300;
   line-height: 1.5;
 }
-main #thought img
+.thought_img_container img
 {
   max-width: 50rem;
   width: 100%;
@@ -1000,10 +1010,11 @@ nav ul table .social-media-page
 }
 @media screen and (max-width:500px)
 {
-    .text-box h1
-    {
-         font-size: 5vw;
-    }
+
+  .thought_img_container h1{
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
  .text-box
  {
  font-size: 5vw;
@@ -1055,6 +1066,8 @@ main #photo-background {
 main #aboutus .about-text {
   top: 350PX;
   margin: 19px 0px;
+  user-select: none;
+
 }
 header #account_button
 {
